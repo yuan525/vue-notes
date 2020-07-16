@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!-- 1、导入vue的包 -->
+		<script src="./util/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<h1>{{title}}</h1>
+		</div>
+	</body>
+	
+		<script>
+			//2、创建vue的实例
+			// 当我们引入vue的包之后，在浏览器内存中就多了一个名为vue构造函数，所以我们可以通过new关键字来创建vue的实例
+			var app=new Vue({
+				el:'#app',//表示当前这个实例app要控制页面上的哪个区域
+				data:{    //此处存放el中要用到的数据
+					title:"hello world"
+				}
+			})
+			
+		</script>
+</html>
