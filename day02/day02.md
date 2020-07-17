@@ -426,6 +426,7 @@ click2(e){
 ```
 
 * v-on修饰符
+
  - .stop - 调用 event.stopPropagation()。
  - .prevent - 调用 event.preventDefault()。
  - .capture - 添加事件侦听器时使用 capture 模式。
