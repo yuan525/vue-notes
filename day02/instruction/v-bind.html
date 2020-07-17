@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<style type="text/css">
+			.red{
+				width: 10px;
+				height: 10px;
+				border: 3px solid red;
+				
+			}
+			.classA{
+				text-align: center;
+			}
+			.classB{
+				line-height: 100px;
+			}
+			.classc{
+				width: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 绑定一个属性 -->
+			<img v-bind:src="src" >
+			<!-- 动态绑定一个属性 -->
+			<img v-bind:[key]="index" >
+			<!-- 缩写 -->
+			<img :src="src" >
+			<img :[key]="index" >
+			<!-- class绑定 -->
+			<div :class="{ red: isRed }"></div>
+			<div :class="[classA, classB]"></div>
+			<div :class="[classA, { classB: isB, classC: isC }]">
+				<!-- style绑定 -->
+			 <p v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }">啊啊啊</p>
+			 <p v-bind:style="styleObject">aaa</p>
+			 <p v-bind:style="[styleObject,baseStyles]">bbbbbbbb</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				src:'假装这里有一个图片链接',
+				key:'src',
+				index:'图片链接',
+				isRed:true,
+				classA:'classA',
+				classB:"classB",
+				//classc:'classc',
+				isB:true,
+				isC:true,
+				activeColor: 'red',
+				fontSize: 30,
+				styleObject: {
+				    color: 'red',
+				    fontSize: '13px'
+				  },
+				  baseStyles:{
+					  width: "100px",
+					  height: "100px",
+					  backgroundColor: "rgba(0,0,0,0.5)"
+				  }
+			}
+		})
+	</script>
+</html>

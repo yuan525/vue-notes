@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p> 姓名:<input v-model.trim="name"  placeholder="请输入姓名"></p>
+			<p>
+				性别:<input type="radio" id="boy" value="男" v-model="sex">
+                     <label for="boy">男</label>
+					 
+					 <input type="radio" id="girl" value="女" v-model="sex">
+					 <label for="girl">女</label>
+			</p>
+			<p>
+				爱好:<input type="checkbox" id="music" value="音乐" v-model="hobby">
+                     <label for="music">音乐</label>
+					 
+					 <input type="checkbox" id="art" value="美术" v-model="hobby">
+					 <label for="art">美术</label>
+					 
+					 <input type="checkbox" id="game" value="游戏" v-model="hobby">
+					 <label for="game">游戏</label>
+			</p>
+			<p>
+				选择:<select v-model="selected">
+                      <option disabled value="">请选择</option>
+                      <option>A</option>
+                      <option>B</option>
+                      <option>C</option>
+                    </select>
+			</p>
+			<p>
+				描述:<textarea v-model="msg" placeholder="描述内容"></textarea>
+			</p>
+			
+			<p>---------------------------------------------------------------</p>
+			<p>姓名:{{name}}</p>
+			<p>性别:{{sex}}</p>
+			<p>爱好:{{hobby}}</p>
+			<p>选择:{{selected}}</p>
+			<p>描述:{{msg}}</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				name:'',
+				msg:'',
+				hobby:[],
+				sex:'',
+				selected:''
+			}
+		})
+	</script>
+</html>

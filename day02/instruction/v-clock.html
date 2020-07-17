@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <style type="text/css">
+        	[v-cloak] {
+        	  display: none;
+        	}
+        </style>
+	</head>
+	<body>
+		<div id="app">
+			<p v-cloak>{{msg}}</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				msg:'hello world'
+			}
+		})
+	</script>
+</html>

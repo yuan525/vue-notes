@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<p>content:{{content}}</p>
+			<button v-on:click="content += 1">add+1</button>
+			<!-- 缩写 -->
+			<button @click="content += 1">add+1</button>
+			
+			<button v-on:click="click">点击事件</button>
+			<!-- 动态事件 -->
+			<button v-on:[event]='click'>动态事件</button>
+			
+			<!-- 传参 -->
+			<button v-on:click="click2('tom')">传参</button>
+			
+			<!-- 修饰符 -->
+			<!-- 阻止冒泡 -->
+			<button @click.stop="doThis"></button>
+			<!-- 阻止默认行为,提交事件不再重载页面 -->
+			<form v-on:submit.prevent="onSubmit"></form>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				content:0,
+				event:'click'
+			},
+			methods:{
+				click(){
+				   alert('Hello world')	
+				},
+				click2(e){
+					alert('hello '+ e)
+				}
+			}
+		})
+	</script>
+</html>

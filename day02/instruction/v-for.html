@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			<!-- 循环数组 -->
+			<p v-for="item in arr">{{item}}</p>
+			<p>---------------------------------------------------</p>
+			<p v-for="item of arr">{{item}}</p>
+			<p>---------------------------------------------------</p>
+			<p v-for="(item,index) in arr">下标:{{index}},值:{{item}}</p>
+			<p>---------------------------------------------------</p>
+			
+			<!-- 遍历对象 -->
+			<p v-for="item in obj">{{item}}</p>
+			<p>---------------------------------------------------</p>
+			<p v-for="(item,name) in obj">建:{{name}}----值:{{item}}</p>
+			<p>---------------------------------------------------</p>
+			<p v-for="(item,name,index) in obj">索引:{{index}}----建:{{name}}----值:{{item}}</p>
+			<p>---------------------------------------------------</p>
+			
+			<!-- 遍历数字 -->
+			<p v-for="num in 4">{{num}}</p>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				arr:['a','b','c','d'],
+				obj:{
+					name:'tom',
+					sex:'男',
+					age:18
+				}
+			}
+		})
+	</script>
+</html>
