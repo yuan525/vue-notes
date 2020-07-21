@@ -17,7 +17,7 @@
  
 <h1 id='1'>1.v-html</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-html.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-html.html)
 - 数据绑定最常见的形式就是使用“Mustache”语法 (双大括号) 的文本插值.双大括号会将数据解释为普通文本，而非 HTML 代码,如果想输出真正的html,就用到v-html
  - 用法:
 ```
@@ -32,7 +32,7 @@
 
 <h1 id='2'>2.v-once</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-once.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-once.html)
 * 只渲染元素和组件一次。随后的重新渲染，元素/组件及其所有的子节点将被视为静态内容并跳过。这可以用于优化更新性能
  * 用法:
 
@@ -53,7 +53,7 @@
  
 <h1 id='3'>3.v-text</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-text.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-text.html)
 * 更新元素的 textContent,和{{Mustache}}效果一样,但是会覆盖标签内的文本
 * 因为没有{{}}表达式,所以不会有闪烁问题
  * 用法:
@@ -71,7 +71,7 @@
   
 <h1 id='4'>4.v-pre</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-pre.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-pre.html)
 * 跳过这个元素和它的子元素的编译过程。可以用来显示原始 Mustache 标签。跳过大量没有指令的节点会加快编译。
   * 用法:
   ```
@@ -86,7 +86,7 @@
   
 <h1 id='5'>5.v-clock</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-clock.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-clock.html)
 > 这个指令保持在元素上直到关联实例结束编译。和 CSS 规则如 [v-cloak] { display: none } 一起用时，这个指令可以隐藏未编译的 Mustache 标签直到实例准备完毕。
 
 * 这段话什么意思呢,简单来说吧.我们知道渲染普通文本有两种方式:{{}}和v-text,如果我们用{{msg}}来渲染文本'hello',在网络速度比较慢的时候,用户会先看到  **{{msg}}**  ,再看到  **hello**  ,即所谓的闪烁问题,而v-clock指令配合CSS 规则如 [v-cloak] { display: none } 一起用时,就是来解决这种问题的
@@ -111,7 +111,7 @@
 
 <h1 id='7'>7.v-model</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-model.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-model.html)
 * 表单输入绑定,可以在表单元素上创建双向的数据绑定
 
  - input输入框
@@ -174,7 +174,7 @@
 
 <h1 id='8'>8.v-if</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-if.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-if.html)
 * v-if 指令用于条件性地渲染一块内容。这块内容只会在指令的表达式返回 true 值的时候被渲染。
 ```	
 <p v-if="boolen">当boolen为true时这里显示,当boolen为false时这里隐藏</p>
@@ -216,7 +216,7 @@ Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从�
 
 <h1 id='9'>9.v-show</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-show.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-show.html)
 * 根据表达式之真假值，切换元素的显示隐藏,和v-if不同的是,v-show影藏时是在元素的style中加上display:none,元素本身还存在于DOM中,
 ```
 <p v-show="bol"></p>
@@ -234,7 +234,7 @@ Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从�
 
 <h1 id='10'>10.v-for</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-for.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-for.html)
 > 我们可以用 v-for 指令基于一个数组来渲染一个列表。v-for 指令需要使用 item in items 形式的特殊语法，其中 items 是源数据数组，而 item 则是被迭代的数组元素的别名。
 
 * 遍历一个数组
@@ -282,7 +282,7 @@ Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从�
 
 <h1 id='11'>11.v-bind</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-bind.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-bind.html)
 > 动态地绑定一个或多个 attribute，或一个组件 prop 到表达式。在绑定 class 或 style attribute 时，支持其它类型的值，如数组或对象
 
 * 绑定一个属性
@@ -383,7 +383,7 @@ Vue 会尽可能高效地渲染元素，通常会复用已有元素而不是从�
  
 <h1 id='12'>12.v-on</h1>
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-on.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02.vue%E6%8C%87%E4%BB%A4/instruction/v-on.html)
 > 绑定事件监听器。事件类型由参数指定。表达式可以是一个方法的名字或一个内联语句，如果没有修饰符也可以省略。
 
 * 可以用 v-on 指令监听 DOM 事件，并在触发时运行一些 JavaScript 代码。

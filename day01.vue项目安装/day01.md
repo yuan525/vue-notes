@@ -4,7 +4,7 @@
 2. 将下载的文件放在项目中
 3. 在页面引入
 
-[例子](https://github.com/yuan525/vue-notes/blob/master/day01/demo01/new_file.html)
+[例子](https://github.com/yuan525/vue-notes/blob/master/day01.vue%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/demo01/new_file.html)
  
  
 
@@ -19,7 +19,7 @@
 ``` 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
 ```
-[例子](https://github.com/yuan525/vue-notes/blob/master/day01/demo02/new_file.html)
+[例子](https://github.com/yuan525/vue-notes/blob/master/day01.vue%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/demo02/new_file.html)
 ## 3、npm 脚手架方法
 ### 第一步、安装node
 * vue的运行是要依赖于node的npm的管理工具来实现,所以在搭建vue的开发环境前，我们现安装node。
@@ -80,4 +80,4 @@ cnpm run dev
 ![](day01_files/10.jpg)
 *此时在浏览器输入[http://localhost:8080/](http://localhost:8080/)，就可以看到vue项目已经搭建成功
 ![](day01_files/11.jpg)
-[例子](https://github.com/yuan525/vue-notes/tree/master/day01/demo03/my-vue)
+[例子](https://github.com/yuan525/vue-notes/tree/master/day01.vue%E9%A1%B9%E7%9B%AE%E5%AE%89%E8%A3%85/demo03/my-vue)

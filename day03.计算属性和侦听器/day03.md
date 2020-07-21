@@ -42,7 +42,7 @@ bindinput(){
 > 2. 计算属性：不管是否渲染，只要计算属性依赖的数据（缓存）未发生变化，就永远不变。
 > 3. 假设我们有一个性能开销比较大的计算属性 A，它需要遍历一个巨大的数组并做大量的计算。然后我们可能有其他的计算属性依赖于 A。如果没有缓存，我们将不可避免的多次执行 A 的 getter！如果你不希望有缓存，请用方法来替代。
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-html.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day03.%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BE%A6%E5%90%AC%E5%99%A8/demo/computed_demo.html)
 
 # 侦听器 watch
 
@@ -96,4 +96,4 @@ watch:<input  type="number" :value="watch_num"/>
 > 2. watch侦听data中的数据，所以watch的对象必须与所侦听的属性同名
 > 2. 需要在数据变化时执行异步或开销较大的操作时，watch方式是最有用的
 
-[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-html.html)
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day03.%E8%AE%A1%E7%AE%97%E5%B1%9E%E6%80%A7%E5%92%8C%E4%BE%A6%E5%90%AC%E5%99%A8/demo/watch_demo.html)
