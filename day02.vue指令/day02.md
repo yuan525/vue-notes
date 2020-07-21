@@ -55,6 +55,7 @@
 
 [代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-text.html)
 * 更新元素的 textContent,和{{Mustache}}效果一样,但是会覆盖标签内的文本
+* 因为没有{{}}表达式,所以不会有闪烁问题
  * 用法:
 ```
 <p>{{msg}}!!!!!!</p>

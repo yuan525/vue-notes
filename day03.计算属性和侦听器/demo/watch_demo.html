@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			原数据：<input type="number" value="" v-model="num"/>
+			原数据2：<input type="number" value="" v-model="num2"/>
+			watch:<input  type="number" :value="watch_num"/>
+		</div>
+	</body>
+	<script type="text/javascript">
+		const app=new Vue({
+			el:'#app',
+			data:{
+				num:1,
+				num2:1,
+				watch_num:1
+			},
+			watch:{
+				num(){
+					this.watch_num=this.num*2
+				},
+				num2(){
+					this.watch_num=this.num*10
+				}
+			}
+		})
+	</script>
+</html>
