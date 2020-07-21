@@ -95,3 +95,5 @@ watch:<input  type="number" :value="watch_num"/>
 > 1. 我们可以看到，计算属性computed一般书写为一个函数，返回一个值，这个值不在data中，而在computed中.
 > 2. watch侦听data中的数据，所以watch的对象必须与所侦听的属性同名
 > 2. 需要在数据变化时执行异步或开销较大的操作时，watch方式是最有用的
+
+[代码示例](https://github.com/yuan525/vue-notes/blob/master/day02/instruction/v-html.html)
