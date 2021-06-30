@@ -16,31 +16,31 @@
 		3、如果中间元素guess小于要找的数字item，说明item在右边，也就是说item在数组下标中间min到下标结尾end之间，所以此时要将开头下标start的值改为min的值：start=min
 		4、如果中间元素guess等于要找的数字item，说明找到啦~
 		**/
-		const arr=[1,3,5,6,7,8,10,15,19,23,24,35]
-		let start=0
-		let end=arr.length-1
-		let min=parseInt((start+end)/2)
-		let guess =arr[min]
-			
-		function binary_search(list,item){
-			min=parseInt((start+end)/2)
-			guess =arr[min]
-			console.log("中间下标",min)
+		const arr = [1, 3, 5, 6, 7, 8, 10, 15, 19, 23, 24, 35]
+		let start = 0
+		let end = arr.length - 1
+		let min = parseInt((start + end) / 2)
+		let guess = arr[min]
+
+		function binary_search(list, item) {
+			min = parseInt((start + end) / 2)
+			guess = arr[min]
+			console.log("中间下标", min)
 			// console.log("中间元素",guess)
 			console.log('卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍')
-			if(guess>item){
-				end=min
-				binary_search(list,item)
+			if (guess > item) {
+				end = min
+				binary_search(list, item)
 			}
-			if(guess<item){
-				start=min
-			  binary_search(list,item)
+			if (guess < item) {
+				start = min
+				binary_search(list, item)
 			}
-			if(guess===item){
+			if (guess === item) {
 				return `找到了,下标是${min},元素是:${guess}`
 			}
 		}
-		
-		console.log(binary_search(arr,24))
+
+		console.log(binary_search(arr, 24))
 	</script>
 </html>

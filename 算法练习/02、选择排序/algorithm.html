@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>选择排序</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		/**
+           需求：将一个长度为n的无序数组排序
+		   实现步骤：
+		   1、遍历无序数组，找出最小的元素，插入到新的数组中，并在原数组中删除此元素
+		   2、重复第一步
+		   时间复杂度：O(n²)
+		 **/
+		const arr = [1, 5, 2, 7, 3, 9, 6, 8, 4]
+
+		function small(arr) { // 找出最小元素
+			let smallist = arr[0] //最小元素
+			let smallist_index = 0 //最小元素下标
+			for (let i = 0; i < arr.length; i++) {
+				if (arr[i] < smallist) {
+					smallist = arr[i]
+					smallist_index = i
+				}
+			}
+			return smallist_index
+		}
+		// console.log('最小元素下标是：', small(arr))
+
+		function Sort(arr) {
+			let newArr = []
+			for (let i = 0; i <= arr.length; i++) {
+				i = 0 // 因为每次循环，数组长度都在变化，所以每次都要从下标0开始
+				// console.log(i, arr)
+				let smallist_index = small(arr)
+				newArr.push(arr.splice(smallist_index, 1)[0]) // 取消最小值之后将这个元素添加到新数组，并且从原数组中删除
+
+			}
+			return newArr
+		}
+		console.log("排序后的数组：", Sort(arr))
+	</script>
+</html>
