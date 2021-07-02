@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>递归</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		/**
+		 * 概念：所有递归都有两个条件：递归条件和基线条件
+		 * 满足递归条件时调用自身，满足基线条件时跳出
+		 * 
+		 * 案例：用代码实现5的阶乘，5！
+		 * 
+		 * 阶乘：数学术语，一个正整数的阶乘（factorial）是所有小于及等于该数的正整数的积，并且0的阶乘为1。自然数n的阶乘写作n!
+		 **/
+		function factorial(num) {
+			// console.log(`${num}*${num-1}`)
+
+			if (num <= 1) {
+				return 1
+			} else {
+				return num * factorial(num - 1)
+			}
+		}
+
+		console.log(factorial(5))
+	</script>
+
+</html>
