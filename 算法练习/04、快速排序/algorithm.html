@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>快速排序</title>
+	</head>
+	<body>
+	</body>
+	<script>
+		/**
+		 * 需求：对一个无序数组进行排序
+		 * 实现步骤：
+		 * 1、取出数组中间的值：pivot（此时数组长度-1）
+		 * 2、遍历数组，其中比pivot小的值放在left数组中，比pivot大的值放在right数组中（此时原数组的长度-1再/2）
+		 * 3、对left数组和right数组重复1，2步骤，直到数组的长度小于等于1
+		 * 
+		 * **/
+		const arr=[5,1,6,2,8,3,9,4,7]
+		function quicksort(arr){
+			if(arr.length<=1){
+				return arr
+			}else{
+				let pivotIndex=parseInt(arr.length/2)
+				let pivot=arr.splice(pivotIndex,1)[0]
+				let left=[]
+				let right=[]
+				for(let i=0;i<arr.length;i++){
+					if(arr[i]<pivot){
+						left.push(arr[i])
+					}else{
+						right.push(arr[i])
+					}
+				}
+				// console.log('卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍卍')
+				// console.log('left:',left)
+				// console.log('pivot',pivot)
+				// console.log('right:',right)
+				return quicksort(left).concat([pivot],quicksort(right))
+				/**
+				 *           5162347                                              [8]                    [9]
+				 * [1]         [2]         56347              
+				 *                          [3]      5647
+				 *                                    [4]       567
+				 *                                          [5] [6] [7]
+				 * **/
+			}
+			
+		}
+		console.log('=======',quicksort(arr))
+	</script>
+</html>
